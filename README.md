@@ -26,62 +26,68 @@ Execute the necessary commands/batch file for the desired output.
 # WINDOWS COMMANDS:
 ## Exercise 1: Basic Directory and File Operations
 Create a directory named "MyLab" on the desktop.
-```
-mkdir %sec%\Desktop\MyLab
-```
-![image](https://github.com/user-attachments/assets/aa3292a2-6926-4f1a-92a0-cd6d9953826f)
 
 
 ## COMMAND AND OUTPUT
+
+mkdir %userprofile%\Desktop\MyLab
+
+![325093274-30906be8-14a0-42df-be77-32fd1db31b60](https://github.com/user-attachments/assets/9a2cc7df-d480-435a-8f98-4feea6f2a0e9)
 
 Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
-```
-cd %sec%\Desktop\MyLab
-touch MyFile.txt
-```
-![image-1](https://github.com/user-attachments/assets/885befb3-0cc0-4586-bf72-67edf5f9aa35)
+
 
 
 ## COMMAND AND OUTPUT
+cd %userprofile%\Desktop\MyLab
+
+![325093472-219b74d7-05db-4607-ba11-27751dc8e214](https://github.com/user-attachments/assets/a8d269fb-9806-4780-9fc2-7ea10bac4326)
+
+![325093753-231c6c4e-3340-415c-953c-3d929983c9ef](https://github.com/user-attachments/assets/15d92e5d-5935-4df3-b297-47a74d3afa13)
 
 List the contents of the "MyLab" directory.
-```
-dir %sec%\Desktop\MyLab
-```
-![image-2](https://github.com/user-attachments/assets/09ae5c58-d5b1-4153-805d-74ca8d7ce224)
-
 
 ## COMMAND AND OUTPUT
+
+dir %userprofile%\Desktop\MyLab
+
+![325094082-26b5dd3d-0930-4a7b-bbc1-b70d2eab433d](https://github.com/user-attachments/assets/291694b1-57a1-42b7-8925-ef6cecb12f48)
 
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
-```
-mkdir %sec%\Desktop\Backup
-cp MyFile.txt %sec%\Desktop\Backup
-```
-![image-3](https://github.com/user-attachments/assets/dcccbcce-f338-4180-8690-f7ddb7bf6a44)
-![image-4](https://github.com/user-attachments/assets/62ec2861-d99b-46fc-96d7-88fba712ac4c)
+
 
 ## COMMAND AND OUTPUT
+mkdir %userprofile%\Desktop\Backup
+
+copy MyFile.txt %userprofile%\Desktop\Backup
+
+![325095313-4b522d08-477a-4ac2-bdf8-ce34b5377f8a](https://github.com/user-attachments/assets/cf8c1145-a98d-4290-996b-cb6f834dee13)
+![325095614-2b3d2723-ef8d-47a6-a7a6-d230fc1e3937](https://github.com/user-attachments/assets/c189166f-5753-4ecd-ae03-77c2b1e71a9a)
+
 
 Move the "MyLab" directory to the "Documents" folder.
-```
-mv MyFile.txt MyLab\Documents
-```
-![image-5](https://github.com/user-attachments/assets/2aab07a8-830c-45e6-abc3-d43b5d68d97b)
 
 
 ## COMMAND AND OUTPUT
+mv Myfile.txt %userprofile%\Documents
+
+![325095890-7a71bbce-a804-472a-96be-308a5862f6ba](https://github.com/user-attachments/assets/46718950-d9be-4ea8-b9e1-3c058c50ebc9)
 
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
-
-### BackupScript.bat
 ```
 @echo off
-mkdir %sec%\Desktop\DocBackup
-copy %sec%\Documents\*.docx %sec%\Desktop\DocBackup
-del %sec%\Documents\DocBackup\*.docx
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+echo Backup completed successfully!
+```
+Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+del %userprofile%\Documents\*.docx
 echo Backup and deletion completed successfully!
 ```
 
@@ -89,15 +95,7 @@ echo Backup and deletion completed successfully!
 
 
 ## OUTPUT
-
-![image-6](https://github.com/user-attachments/assets/4ea25ccb-6185-4e0e-a73c-4a44010ef219)
-
-
-
-# RESULT:
-The commands/batch files are executed successfully.
-
-
+![325099134-3d062ebb-7d20-4c09-95dc-b10861f34223](https://github.com/user-attachments/assets/06bc777d-4b47-461f-b392-a861609ffa7f)
 
 
 
